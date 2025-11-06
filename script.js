@@ -1,6 +1,6 @@
 // Global variables
 let messagesData = [];
-const EXCEL_FILE = 'Mensajes_Antonio.xlsx';
+const EXCEL_FILE = 'Mensajes_Antonio_limpio.xlsx';
 
 // DOM Elements
 const loadingEl = document.getElementById('loading');
