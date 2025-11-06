@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensajes de Agradecimiento para Antonio - Comunidad Endeavor España</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- SheetJS CDN -->
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="title">Mensajes de Agradecimiento para Antonio</h1>
+            <p class="subtitle">Comunidad Endeavor España</p>
+        </div>
+    </header>
+
+    <nav class="nav-selector">
+        <div class="container">
+            <label for="message-selector" class="selector-label">Buscar mensaje de:</label>
+            <select id="message-selector" class="selector" disabled>
+                <option value="">Cargando mensajes...</option>
+            </select>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Loading state -->
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>Cargando mensajes...</p>
+            </div>
+
+            <!-- Error state -->
+            <div id="error" class="error hidden">
+                <div class="error-icon">⚠️</div>
+                <h2>Error al cargar los mensajes</h2>
+                <p id="error-message"></p>
+                <button onclick="location.reload()" class="retry-button">Reintentar</button>
+            </div>
+
+            <!-- Messages grid -->
+            <div id="messages-grid" class="messages-grid hidden">
+                <!-- Messages will be dynamically inserted here -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Con cariño, la Comunidad Endeavor España ❤️</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
